@@ -1,0 +1,10 @@
+flask
+flask-cors
+tensorflow
+opencv-python
+numpy
+Pillow
+matplotlib
+joblib
+keras
+streamlit

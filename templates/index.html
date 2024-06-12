@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Blood Cancer Prediction</title>
+  <link rel="icon" href="{{ url_for('static', filename='assets/favicon0.ico') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container main">
+    <div class="sub-container">
+      <h1>Blood Cancer Prediction</h1>
+
+    </div>
+    <div class="sub">
+      <span>Leukemia</span>
+      <span>&</span>
+      <span>Myeloma</span>
+    </div>
+  </div>
+  <div class="container mid">
+    <form method="post" action="/result" enctype="multipart/form-data" id="formData">
+      <input class="input-img" id="inputImage" name="inputImage" type="file" onchange="handleFileSelect(event)">
+      <div class="buttons">
+        <button type="button" class="upload-button" onclick="document.getElementById('inputImage').click()">Upload</button>
+        <button type="submit" class="predict-button">Predict</button>
+      </div>
+    </form>
+  </div>
+  <div class="footer">
+    <div>
+      <h3>About</h3>
+      <p>The Cancer Prediction System was developed using python deep learning models. It successfully predicts whether a cell is cancerous or not for Myeloma and Leukemia.</p>
+    </div>
+    <div class="footer-col border">
+      <ul>
+        <li><a href="mailto:sivabheri8@gmail.com">sivabheri8@gmail.com</a></li>
+        <li><a href="tel:8520931895">+91 8520931895</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">Copyright © 2024 sivabheri-griet |</p>
+</body>
+
+</html>
+
+<script type="text/javascript">
+  function handleFileSelect(event) {
+    const input = event.target;
+    if (input.files && input.files[0]) {
+      document.querySelector('.upload-button').innerText = input.files[0].name;
+    }
+  }
+  function submitForm() {
+    const inputImage = document.getElementById('inputImage');
+    if (inputImage.files && inputImage.files.length > 0) {
+      document.getElementById('formData').submit();
+    } else {
+      alert('Please upload an image first.');
+    }
+  }
+</script>

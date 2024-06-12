@@ -1,0 +1,41 @@
+
+body {
+    background-color: #f0f2f6;
+}
+
+h1 {
+    color: #ff6347;
+    text-align: center;
+}
+
+.stButton button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.stFileUploader label {
+    color: #ff6347;
+}
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+h2, h3 {
+    color: #c48e2a;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.stImage {
+    margin: 20px 0;
+}
+
+.stMarkdown {
+    margin: 20px 0;
+}
